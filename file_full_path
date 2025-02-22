@@ -3,6 +3,9 @@ import HomePage from "@/pages/HomePage.vue";
 import UserLoginPage from "@/pages/user/UserLoginPage.vue";
 import UserRegisterPage from "@/pages/user/UserRegisterPage.vue";
 import UserManage from "@/pages/admin/UserManage.vue";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -10,8 +13,7 @@ const routes: Array<RouteRecordRaw> = [
     name: "home",
     component: HomePage,
     meta: {
-      title: "童心用户中心-主页",
-      component: () => import("@/pages/HomePage.vue"),
+      title: () => t("routes.home"),
     },
   },
   {
@@ -19,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
     name: "userLogin",
     component: UserLoginPage,
     meta: {
-      title: "童心用户中心-用户登录",
+      title: () => t("routes.userLogin"),
     },
   },
   {
@@ -27,7 +29,7 @@ const routes: Array<RouteRecordRaw> = [
     name: "userRegister",
     component: UserRegisterPage,
     meta: {
-      title: "童心用户中心-用户注册",
+      title: () => t("routes.userRegister"),
     },
   },
   {
@@ -35,7 +37,7 @@ const routes: Array<RouteRecordRaw> = [
     name: "userManage",
     component: UserManage,
     meta: {
-      title: "童心用户中心-用户管理",
+      title: () => t("routes.userManage"),
     },
   },
 ];
@@ -43,10 +45,6 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-});
-router.beforeEach((to, from, next) => {
-  to.meta.title && (document.title = to.meta.title as string);
-  next();
 });
 
 export default router;

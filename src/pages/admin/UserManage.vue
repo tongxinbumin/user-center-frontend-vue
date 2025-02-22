@@ -32,7 +32,6 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { SmileOutlined, DownOutlined } from "@ant-design/icons-vue";
 import { deleteUser, getUserList } from "@/api/user";
 import { ref } from "vue";
 import { message } from "ant-design-vue";

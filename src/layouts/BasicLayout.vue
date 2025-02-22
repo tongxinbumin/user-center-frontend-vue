@@ -18,6 +18,7 @@
 
 <script setup lang="ts">
 import GlobalHeader from "@/components/GlobalHeader.vue";
+//import GlobalHeader from "@/components/GlobalHeader.vue";
 //测试代码
 // import { getCurrentUser } from "@/api/user";
 //

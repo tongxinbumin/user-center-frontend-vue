@@ -73,7 +73,7 @@ const items = ref<MenuProps["items"]>([
     title: "用户管理",
   },
   {
-    key: "alipay",
+    key: "/alipay",
     label: h(
       "a",
       { href: "https://github.com/tongxinbumin", target: "_blank" },
