@@ -72,6 +72,18 @@
           placeholder="请输入编号"
         />
       </a-form-item>
+      <a-form-item
+        label="性别"
+        name="gender"
+        :rules="[{ required: true, message: '请选择性别' }]"
+      >
+        <a-radio-group v-model:value="formState.gender">
+          <a-radio value="male">男</a-radio>
+          <a-radio value="female">女</a-radio>
+          <a-radio value="other">其他</a-radio>
+          <a-radio value="secret">保密</a-radio>
+        </a-radio-group>
+      </a-form-item>
       <a-form-item :wrapper-col="{ offset: 11, span: 13 }">
         <a-button type="primary" html-type="submit">注册</a-button>
       </a-form-item>
@@ -90,6 +102,7 @@ interface FormState {
   userPassword: string;
   checkPassword: string;
   planetCode: string;
+  gender: string;
 }
 
 const formState = reactive<FormState>({
@@ -98,6 +111,7 @@ const formState = reactive<FormState>({
   userPassword: "",
   checkPassword: "",
   planetCode: "",
+  gender: "",
 });
 const router = useRouter();
 

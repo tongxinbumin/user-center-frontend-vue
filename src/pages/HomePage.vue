@@ -1,6 +1,7 @@
 <template>
   <div id="homePage">
     <h1>{{ msg }}</h1>
+    <a href="https://www.hpu.edu.cn/" target="_blank">学校网址</a>;
   </div>
 </template>
 

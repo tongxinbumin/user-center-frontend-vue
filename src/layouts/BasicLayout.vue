@@ -28,25 +28,31 @@ import GlobalHeader from "@/components/GlobalHeader.vue";
 </script>
 
 <style scoped>
+#basic-layout {
+  background: linear-gradient(to right, #fff, #05dff3);
+  min-height: 100vh;
+  position: relative;
+}
 #basic-layout .footer {
-  background: #faf8f8;
+  background: linear-gradient(to right, #fff, #05dff3);
   text-align: center;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 16px;
+  margin: 0;
 }
 
 #basic-layout .content {
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 100px;
+  margin-bottom: 0;
   background: linear-gradient(to right, #fff, #05dff3);
 }
 
 #basic-layout .header {
   background: linear-gradient(to right, #fff, #05dff3);
-  margin-bottom: 16px;
+  margin-bottom: 0;
   color: unset;
   padding-inline: 20px;
 }
